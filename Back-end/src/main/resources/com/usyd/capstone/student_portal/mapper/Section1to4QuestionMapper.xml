@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.usyd.capstone.student_portal.mapper.Section1to4QuestionMapper">
+
+    <resultMap id="SurveyInfoMap" type="com.usyd.capstone.student_portal.pojo.Survey.SurveyInfo">
+        <id property="surveyId" column="survey_id"/>
+        <result property="surveyName" column="survey_name"/>
+        <result property="surveyDescription" column="survey_description"/>
+        <result property="createdAt" column="created_at"/>
+        <!-- embed Section1to4Info -->
+        <association property="singleSection" column="section_id" javaType="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Info"
+                     resultMap="SectionInfoMap"/>
+    </resultMap>
+
+
+    <resultMap id="SectionInfoMap" type="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Info">
+        <id property="sectionId" column="section_id"/>
+        <result property="sectionNumOfSurvey" column="section_num_of_survey"/>
+        <result property="sectionName" column="section_name"/>
+        <result property="surveyId" column="survey_id"/>
+        <!-- embed questionsOfSingleSection -->
+        <collection property="questionsOfSingleSection" ofType="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Question"
+                    resultMap="QuestionMap"/>
+    </resultMap>
+
+    <resultMap id="QuestionMap" type="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Question">
+        <id property="questionId" column="question_id"/>
+        <result property="questionNumOfSection" column="question_num_of_section"/>
+        <result property="questionName" column="question_name"/>
+        <result property="questionText" column="question_text"/>
+        <result property="questionDescription" column="question_description"/>
+        <result property="questionInstruction" column="question_instruction"/>
+        <result property="questionType" column="question_type"/>
+        <result property="imgUrl" column="img_url"/>
+        <result property="sectionId" column="section_id"/>
+
+        <!-- 嵌套 options -->
+        <collection property="options" ofType="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Option" resultMap="OptionMap"/>
+    </resultMap>
+
+    <resultMap id="OptionMap" type="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Option">
+        <id property="optionId" column="option_id"/>
+        <result property="optionText" column="option_text"/>
+        <result property="meaning" column="meaning"/>
+    </resultMap>
+
+
+    <select id="listQuestionsOfSingleSection" resultMap="SurveyInfoMap">
+        SELECT
+            s.survey_id, s.survey_name, s.survey_description, s.created_at,
+            sec.section_id, sec.section_num_of_survey, sec.section_name, sec.survey_id,
+            q.question_id, q.question_num_of_section, q.question_name, q.question_text,
+            q.question_description,q.question_instruction,q.question_type, q.img_url, q.section_id,
+            o.option_id, o.option_text, o.meaning, o.question_id
+        FROM
+            survey_info s
+                JOIN
+            section1to4_info sec ON s.survey_id = sec.survey_id
+                JOIN
+            section1to4_question q ON sec.section_id = q.section_id
+                LEFT JOIN
+            section1to4_option o ON q.question_id = o.question_id
+        WHERE
+            s.survey_id = #{surveyId}
+          AND sec.section_id = #{sectionId}
+        ORDER BY
+            q.question_num_of_section ASC
+    </select>
+
+
+    <resultMap id="SurveyInfoAllMap" type="com.usyd.capstone.student_portal.pojo.Survey.SurveyInfoAll">
+        <!-- 映射 survey 相关信息 -->
+        <id property="surveyId" column="survey_id"/>
+        <result property="surveyName" column="survey_name"/>
+        <result property="surveyDescription" column="survey_description"/>
+        <result property="createdAt" column="created_at"/>
+
+        <!-- 嵌套 allSections -->
+        <collection property="allSections" ofType="com.usyd.capstone.student_portal.pojo.Survey.Section1to4Question" resultMap="SectionInfoMap"/>
+    </resultMap>
+    <select id="listAllQuestions" resultMap="SurveyInfoAllMap">
+        SELECT
+            s.survey_id, s.survey_name, s.survey_description, s.created_at,
+            sec.section_id, sec.section_num_of_survey, sec.section_name, sec.survey_id,
+            q.question_id, q.question_num_of_section, q.question_name, q.question_text,
+            q.question_description,q.question_instruction,q.question_type, q.img_url, q.section_id,
+            o.option_id, o.option_text, o.meaning, o.question_id
+        FROM
+            survey_info s
+                JOIN
+            section1to4_info sec ON s.survey_id = sec.survey_id
+                JOIN
+            section1to4_question q ON sec.section_id = q.section_id
+                LEFT JOIN
+            section1to4_option o ON q.question_id = o.question_id
+        WHERE
+            s.survey_id = #{surveyId}
+        ORDER BY
+            sec.section_num_of_survey ASC,
+            q.question_num_of_section ASC
+    </select>
+    <select id="getBasicSurveyInfo" resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyInfo">
+        SELECT
+            s.survey_id, s.survey_name, s.survey_description, s.created_at
+        FROM
+            survey_info s
+        WHERE
+            s.survey_id = #{surveyId}
+    </select>
+
+</mapper>

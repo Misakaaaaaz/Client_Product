@@ -1,0 +1,130 @@
+/* Main content area: Scrollbar styles */
+.survey-content {
+    background-color: #ffffff;
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    padding: 20px;
+}
+
+/* Customize scrollbar appearance */
+.survey-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.survey-content::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a;
+    border-radius: 10px;
+}
+
+.survey-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Card styles */
+.survey-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.survey-card1 {
+    position: relative; /* Set parent container as relative positioning */
+    display: flex; /* Use Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping if screen space is insufficient */
+    background-color: #f4feff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.survey-card1 h2 {
+    position: absolute; /* Absolute positioning for the title */
+    top: 10px;
+    left: 3%;
+    margin: 0;
+    padding: 5px;
+}
+
+.survey-card1 canvas {
+    height: 300px !important; /* Reduce chart size */
+    width: 400px !important;
+    margin: 0 auto;
+}
+
+.survey-card2 {
+    position: relative; /* Set parent container as relative positioning */
+    display: flex; /* Use Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping if screen space is insufficient */
+    background-color: #f4feff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.survey-card2 h2 {
+    position: absolute; /* Absolute positioning for the title */
+    top: 10px;
+    left: 3%;
+    margin: 0;
+    padding: 5px;
+}
+
+.survey-card2 ul {
+    margin: 0 auto;
+}
+
+.survey-card2 canvas {
+    height: 250px !important; /* Reduce chart size */
+    width: 400px !important;
+    margin: 0 auto;
+}
+
+.survey-card3 {
+    flex-direction: column;
+    position: relative; /* Set parent container as relative positioning */
+    display: flex; /* Use Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping if screen space is insufficient */
+    background-color: #f4feff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.survey-card3 h2 {
+    position: absolute; /* Absolute positioning for the title */
+    top: 10px;
+    left: 3%;
+    margin: 0;
+    padding: 5px;
+}
+
+.survey-card3 canvas {
+    height: 300px !important; /* Reduce chart size */
+    width: 400px !important;
+    margin: 0 auto;
+}
+
+.survey-card4 {
+    flex-direction: column;
+    position: relative; /* Set parent container as relative positioning */
+    display: flex; /* Use Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping if screen space is insufficient */
+    background-color: #f4feff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.survey-card4 h2 {
+    position: absolute; /* Absolute positioning for the title */
+    top: 10px;
+    left: 3%;
+    margin: 0;
+    padding: 5px;
+}
+
+.survey-card4 canvas {
+    height: 300px !important; /* Reduce chart size */
+    width: 400px !important;
+    margin: 0 auto;
+}

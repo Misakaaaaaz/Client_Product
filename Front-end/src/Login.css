@@ -1,0 +1,190 @@
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Global font settings */
+body, html {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #008b8b; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Login box */
+.login-box {
+    position: relative; /* Enables the Back button to be positioned relative to the login box */
+    width: 350px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form container */
+.form-container {
+    width: 100%;
+}
+
+/* Tab buttons (Login/Register) */
+.tab {
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.tab.active {
+    background-color: #00c5c5;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Input field styles */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #00c5c5;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #00a8a8;
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.forgot-password a {
+    color: #0000ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Popup for successful verification code sending */
+.verification-success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00c5c5;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures the popup appears in the foreground */
+}
+
+/* Popup styles */
+.signup-success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00c5c5;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-success-popup h2 {
+    margin-bottom: 10px;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Close button in popup */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.verification-success-popup h2 {
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    position: absolute;      /* Absolute positioning */
+    top: 15px;               /* 20px from the top */
+    left: 10px;              /* 20px from the left */
+    font-size: 14px;         /* Adjust font size */
+    padding: 5px 10px;       /* Adjust padding for smaller button */
+    background: none;        /* Remove background color */
+    border: none;            /* Remove border */
+    cursor: pointer;         /* Change cursor to pointer */
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent line breaks */
+    font-size: 24px;     /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust bottom margin */
+}

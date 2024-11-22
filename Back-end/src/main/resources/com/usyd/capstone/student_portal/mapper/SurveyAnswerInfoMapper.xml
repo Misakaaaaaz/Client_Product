@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usyd.capstone.student_portal.mapper.SurveyAnswerInfoMapper" >
+
+
+    <!-- 插入 survey_answer_info 表并获取生成的主键 -->
+    <insert id="insertSurveyAnswerInfo" useGeneratedKeys="true" keyProperty="answerId">
+        INSERT INTO survey_answer_info (student_id, survey_id, current_section, current_num_of_question, created_at)
+        VALUES (#{studentId}, #{surveyId}, #{currentSection}, #{currentNumOfQuestion}, NOW())
+    </insert>
+        <update id="updateCompletedSection">
+            UPDATE survey_answer_info
+            SET completed_section = #{completedSection}
+            WHERE answer_id = #{answerId}
+        </update>
+
+
+    <!-- 根据 studentId 和 surveyId 查找 answerId -->
+    <select id="findAnswerIdByStudentAndSurvey" resultType="java.lang.Integer">
+        SELECT answer_id
+        FROM survey_answer_info
+        WHERE student_id = #{studentId} AND survey_id = #{surveyId}
+    </select>
+
+
+    <update id="updateCurrentProgress">
+        UPDATE survey_answer_info
+        SET current_section = #{currentSection}, current_num_of_question = #{currentNumOfQuestion}
+        WHERE answer_id = #{answerId}
+    </update>
+    <update id="updateSurveyAnswerInfo">
+        UPDATE survey_answer_info
+        SET current_section = #{currentSection},
+            current_num_of_question = #{currentNumOfQuestion},
+            created_at = #{createdAt}
+        WHERE answer_id = #{answerId}
+    </update>
+
+
+    <select id="findByStudentAndSurvey"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerInfo">
+        SELECT * FROM survey_answer_info
+        WHERE student_id = #{studentId} AND survey_id = #{surveyId}
+    </select>
+    <select id="findSurveyAnswerInfo"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerInfo">
+        SELECT answer_id, student_id, survey_id, current_section, current_num_of_question
+        FROM survey_answer_info
+        WHERE student_id = #{studentId} AND survey_id = #{surveyId}
+    </select>
+    <select id="getTotalSection" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM section1to4_info WHERE survey_id = #{surveyId}
+    </select>
+    <select id="getCurrentSectionTotalQuestions" resultType="java.lang.Integer">
+        SELECT COUNT(*) AS currentSectionTotalQuestions FROM section1to4_question WHERE section_id = #{currentSectionId};
+    </select>
+    <select id="getAllSectionNums" resultType="java.lang.Integer">
+        SELECT section_num_of_survey
+        FROM section1to4_info
+        WHERE survey_id = #{surveyId}
+        ORDER BY section_num_of_survey;
+    </select>
+
+</mapper>

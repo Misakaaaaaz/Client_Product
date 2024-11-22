@@ -1,0 +1,16 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "studentId": 1,
+        "studentEmail": "18709476001@163.com",
+        "surnameInitial": "S",
+        "firstName": "Steve",
+        "middleName": null,
+        "lastName": "Smith",
+        "age": 18,
+        "countryBorn": "UK",
+        "currentCountry": "Australia",
+        "currentCity": "Sydney"
+    }
+}

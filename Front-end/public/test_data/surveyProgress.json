@@ -1,0 +1,48 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "surveyAnswerInfo": {
+            "answerId": 30,
+            "studentId": 1032,
+            "surveyId": 1,
+            "createdAt": null,
+            "currentSection": 2,
+            "currentNumOfQuestion": 2,
+            "totalSections": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "currentSectionTotalQuestions": 2
+        },
+        "answerStringDetails": [
+            {
+                "answerStringDetailId": 32,
+                "answerId": 30,
+                "questionId": 2,
+                "answerText": null,
+                "createdAt": "2024-10-20T18:00:36",
+                "finalAnswerText": "9,10"
+            },
+            {
+                "answerStringDetailId": 33,
+                "answerId": 30,
+                "questionId": 9,
+                "answerText": null,
+                "createdAt": "2024-10-20T18:00:36",
+                "finalAnswerText": "48"
+            },
+            {
+                "answerStringDetailId": 34,
+                "answerId": 30,
+                "questionId": 15,
+                "answerText": null,
+                "createdAt": "2024-10-20T18:00:36",
+                "finalAnswerText": "rank1031"
+            }
+        ]
+    }
+}

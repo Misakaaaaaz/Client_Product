@@ -1,0 +1,622 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": [
+        {
+            "surveyId": 1,
+            "surveyName": "OIC Education Oxford Career Choice Assessment",
+            "surveyDescription": "This survey assesses is a dummy survey.",
+            "createdAt": "2024-09-10T15:30:06",
+            "allSections": [
+                {
+                    "sectionId": 5,
+                    "sectionNumOfSurvey": 0,
+                    "sectionName": "Information About You",
+                    "surveyId": 1,
+                    "questionsOfSingleSection": [
+                        {
+                            "questionId": "12",
+                            "questionNumOfSection": 1,
+                            "questionName": null,
+                            "questionText": "Your Email",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "13",
+                            "questionNumOfSection": 2,
+                            "questionName": null,
+                            "questionText": "Your Name",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "14",
+                            "questionNumOfSection": 3,
+                            "questionName": null,
+                            "questionText": "Your first language",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "15",
+                            "questionNumOfSection": 4,
+                            "questionName": null,
+                            "questionText": "If other, what's your first language?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "16",
+                            "questionNumOfSection": 5,
+                            "questionName": null,
+                            "questionText": "Your usual country of residence",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "17",
+                            "questionNumOfSection": 6,
+                            "questionName": null,
+                            "questionText": "If other, what's your usual country of residence?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "18",
+                            "questionNumOfSection": 7,
+                            "questionName": null,
+                            "questionText": "Your age",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "19",
+                            "questionNumOfSection": 8,
+                            "questionName": null,
+                            "questionText": "If other, what's your age please?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "20",
+                            "questionNumOfSection": 9,
+                            "questionName": null,
+                            "questionText": "Which school year are you in?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "21",
+                            "questionNumOfSection": 10,
+                            "questionName": null,
+                            "questionText": "If other, which school year are you in?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "22",
+                            "questionNumOfSection": 11,
+                            "questionName": null,
+                            "questionText": "In which country is your school located?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "23",
+                            "questionNumOfSection": 12,
+                            "questionName": null,
+                            "questionText": "If other, which country is your school located?",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        },
+                        {
+                            "questionId": "24",
+                            "questionNumOfSection": 13,
+                            "questionName": null,
+                            "questionText": "Your parent's email",
+                            "questionDescription": null,
+                            "questionInstruction": null,
+                            "questionType": "short_answer",
+                            "imgUrl": null,
+                            "sectionId": "5",
+                            "options": []
+                        }
+                    ]
+                },
+                {
+                    "sectionId": 1,
+                    "sectionNumOfSurvey": 1,
+                    "sectionName": "Your Values",
+                    "surveyId": 1,
+                    "questionsOfSingleSection": [
+                        {
+                            "questionId": "1",
+                            "questionNumOfSection": 1,
+                            "questionName": "Lottery Win",
+                            "questionText": "If you won a lot of money on the lottery (assuming you’re now 18), what would you do first? ",
+                            "questionDescription": null,
+                            "questionInstruction": "Rate, in rank order, the thing you are most likely to do, down to the thing you are least likely to do (1= Most Likely, 6 = Least Likely) Whilst we appreciate that you may want to give two options the same rank, please avoid this. \nGive a rank of 1, 2, 3, 4, 5 or 6 to each option. Clearly write your rank number next to each question number (ignore the box which includes a letter – this is for scoring purposes only). ",
+                            "questionType": "ranking",
+                            "imgUrl": "/images/survey_content/c0fd4acd-976d-479d-8995-d56304093923.png",
+                            "sectionId": "1",
+                            "options": [
+                                {
+                                    "optionId": 6,
+                                    "optionText": "Get financial advice - invest wisely in a secure savings plan and give some to parents/family for safe-keeping",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 1,
+                                    "optionText": "Go out and celebrate, celebrate, celebrate!",
+                                    "meaning": "H"
+                                },
+                                {
+                                    "optionId": 2,
+                                    "optionText": "Buy that car, big house, and those other luxuries you’ve always wanted",
+                                    "meaning": "P"
+                                },
+                                {
+                                    "optionId": 3,
+                                    "optionText": "Pay off the debts of family & friends and support a charity close to your heart",
+                                    "meaning": "A"
+                                },
+                                {
+                                    "optionId": 4,
+                                    "optionText": "Invest it in your education",
+                                    "meaning": "L"
+                                },
+                                {
+                                    "optionId": 5,
+                                    "optionText": "Set up your own business",
+                                    "meaning": "F"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "2",
+                            "questionNumOfSection": 2,
+                            "questionName": "Dinner Guest",
+                            "questionText": "Who would you prefer as a dinner guest (living or dead), from the list of people below?",
+                            "questionDescription": null,
+                            "questionInstruction": "Rank order, the person you would most prefer, down to the one you would avoid at all costs (1= Most Prefer, 6 = Most Avoid) Whilst we appreciate that you may want to give two options the same rank, please avoid this.\nGive a rank of 1, 2, 3, 4, 5 or 6 to each option. Clearly write your rank number next to each question number. (ignore the box which includes a letter – this is for scoring purposes only). ",
+                            "questionType": "ranking",
+                            "imgUrl": "/images/survey_content/c0fd4acd-976d-479d-8995-d56304093923.png",
+                            "sectionId": "1",
+                            "options": [
+                                {
+                                    "optionId": 7,
+                                    "optionText": "A well-known celebrity or social media star",
+                                    "meaning": "H"
+                                },
+                                {
+                                    "optionId": 8,
+                                    "optionText": "A rich and successful entrepreneur/businessperson",
+                                    "meaning": "F"
+                                },
+                                {
+                                    "optionId": 9,
+                                    "optionText": "A campaigner for human rights or spiritual / religious leader",
+                                    "meaning": "A"
+                                },
+                                {
+                                    "optionId": 10,
+                                    "optionText": "A president, prime minister, or world leader",
+                                    "meaning": "P"
+                                },
+                                {
+                                    "optionId": 11,
+                                    "optionText": "A close friend or family member",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 12,
+                                    "optionText": "A Nobel prize winning academic or chancellor/professor of a top university",
+                                    "meaning": "L"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionId": 2,
+                    "sectionNumOfSurvey": 2,
+                    "sectionName": "Your Interests",
+                    "surveyId": 1,
+                    "questionsOfSingleSection": [
+                        {
+                            "questionId": "3",
+                            "questionNumOfSection": 1,
+                            "questionName": "Library",
+                            "questionText": "When visiting a book shop or library, which section would you prefer to visit?",
+                            "questionDescription": null,
+                            "questionInstruction": "Rank in order from 1 = first choice to 6= last choice\nWhilst we appreciate that you may want to give two options the same rank, please avoid this.\nGive a rank of 1, 2, 3, 4, 5 or 6 to each option. Clearly write your rank number next to each question number (please ignore the letter in each box – these are for scoring purposes only)",
+                            "questionType": "ranking",
+                            "imgUrl": "/images/survey_content/c0fd4acd-976d-479d-8995-d56304093923.png",
+                            "sectionId": "2",
+                            "options": [
+                                {
+                                    "optionId": 18,
+                                    "optionText": "Science – either fiction or non-fiction",
+                                    "meaning": "I"
+                                },
+                                {
+                                    "optionId": 17,
+                                    "optionText": "Other non-fiction books, guides & manuals (e.g. revision guides, IT & computing, planning events, etc.)",
+                                    "meaning": "C"
+                                },
+                                {
+                                    "optionId": 13,
+                                    "optionText": "Arts, music, film & literature",
+                                    "meaning": "A"
+                                },
+                                {
+                                    "optionId": 14,
+                                    "optionText": "Business, politics & leadership",
+                                    "meaning": "E"
+                                },
+                                {
+                                    "optionId": 15,
+                                    "optionText": "Well-being, psychology & self-help",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 16,
+                                    "optionText": "Nature, geography, sports & the outdoors",
+                                    "meaning": "R"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "4",
+                            "questionNumOfSection": 2,
+                            "questionName": "Podcast",
+                            "questionText": "Which podcast category are you most likely to tap into?",
+                            "questionDescription": null,
+                            "questionInstruction": "Rank in order from 1 = first choice to 6= last choice\nWhilst we appreciate that you may want to give two options the same rank, please avoid this.\nGive a rank of 1, 2, 3, 4, 5 or 6 to each option. Clearly write your rank number next to each question number (please ignore the letter in each box – these are for scoring purposes only)",
+                            "questionType": "ranking",
+                            "imgUrl": "/images/survey_content/c0fd4acd-976d-479d-8995-d56304093923.png",
+                            "sectionId": "2",
+                            "options": [
+                                {
+                                    "optionId": 19,
+                                    "optionText": "Comedy",
+                                    "meaning": "A"
+                                },
+                                {
+                                    "optionId": 20,
+                                    "optionText": "Science, research & discovery",
+                                    "meaning": "I"
+                                },
+                                {
+                                    "optionId": 21,
+                                    "optionText": "Business & leadership",
+                                    "meaning": "E"
+                                },
+                                {
+                                    "optionId": 22,
+                                    "optionText": "Sports and outdoor pursuits",
+                                    "meaning": "R"
+                                },
+                                {
+                                    "optionId": 23,
+                                    "optionText": "Social issues and current affairs",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 24,
+                                    "optionText": "Organisation, productivity and/or managing your money",
+                                    "meaning": "C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionId": 3,
+                    "sectionNumOfSurvey": 3,
+                    "sectionName": "Personality & Style Questions",
+                    "surveyId": 1,
+                    "questionsOfSingleSection": [
+                        {
+                            "questionId": "5",
+                            "questionNumOfSection": 1,
+                            "questionName": null,
+                            "questionText": "I like to keep my feelings to myself rather than sharing them with everyone",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": "https://www.bing.com/images/search?view=detailV2&ccid=3r1vguZy&id=D66BA18EE154D133745ABEF43F0A4AE1418ADA84&thid=OIP.3r1vguZyWFUJ80A2Nf2k3AHaEK&mediaurl=https%3a%2f%2fimg-blog.csdnimg.cn%2f2021051521244130.jpg%3fx-oss-process%3dimage%2fwatermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MzQ0Nzc3Ng%3d%3d%2csize_16%2ccolor_FFFFFF%2ct_70&exph=1440&expw=2560&q=%e5%9b%be%e7%89%87&simid=608050649994888498&FORM=IRPRST&ck=86AD3FCD36463661C7CBA8A9759BE54B&selectedIndex=0&itb=0&idpp=overlayview&ajaxhist=0&ajaxserp=0",
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 27,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 26,
+                                    "optionText": "Disagree",
+                                    "meaning": "E"
+                                },
+                                {
+                                    "optionId": 25,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "E"
+                                },
+                                {
+                                    "optionId": 28,
+                                    "optionText": "Agree",
+                                    "meaning": "I"
+                                },
+                                {
+                                    "optionId": 29,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "I"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "6",
+                            "questionNumOfSection": 2,
+                            "questionName": null,
+                            "questionText": "I'm often the person my friends rely on to organise things",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": null,
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 34,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "J"
+                                },
+                                {
+                                    "optionId": 32,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 31,
+                                    "optionText": "Disagree",
+                                    "meaning": "P"
+                                },
+                                {
+                                    "optionId": 30,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "P"
+                                },
+                                {
+                                    "optionId": 33,
+                                    "optionText": "Agree",
+                                    "meaning": "J"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "7",
+                            "questionNumOfSection": 3,
+                            "questionName": null,
+                            "questionText": "After a busy week, I'd rather relax by spending time with my friends than on my own",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": null,
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 39,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "E"
+                                },
+                                {
+                                    "optionId": 35,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "I"
+                                },
+                                {
+                                    "optionId": 36,
+                                    "optionText": "Disagree",
+                                    "meaning": "I"
+                                },
+                                {
+                                    "optionId": 37,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 38,
+                                    "optionText": "Agree",
+                                    "meaning": "E"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "8",
+                            "questionNumOfSection": 4,
+                            "questionName": null,
+                            "questionText": "I prefer learning about facts and details rather than theories and ideas",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": null,
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 40,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 41,
+                                    "optionText": "Disagree",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 43,
+                                    "optionText": "Agree",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 44,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "S"
+                                },
+                                {
+                                    "optionId": 42,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "9",
+                            "questionNumOfSection": 5,
+                            "questionName": null,
+                            "questionText": "It's important to show kindness and respect for people, even if you don't like or understand them",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": null,
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 45,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "T"
+                                },
+                                {
+                                    "optionId": 47,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 48,
+                                    "optionText": "Agree",
+                                    "meaning": "F"
+                                },
+                                {
+                                    "optionId": 49,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "F"
+                                },
+                                {
+                                    "optionId": 46,
+                                    "optionText": "Disagree",
+                                    "meaning": "T"
+                                }
+                            ]
+                        },
+                        {
+                            "questionId": "10",
+                            "questionNumOfSection": 6,
+                            "questionName": null,
+                            "questionText": "I tend to plan and start tasks early rather than leaving them to the last minute",
+                            "questionDescription": "These questions only require one answer each.\nChoose only one box to tick to rate your agreement with each statement. Try to avoid using the neutral/middle option as far as possible.",
+                            "questionInstruction": null,
+                            "questionType": "single_choice",
+                            "imgUrl": null,
+                            "sectionId": "3",
+                            "options": [
+                                {
+                                    "optionId": 54,
+                                    "optionText": "Strongly Agree",
+                                    "meaning": "J"
+                                },
+                                {
+                                    "optionId": 53,
+                                    "optionText": "Agree",
+                                    "meaning": "J"
+                                },
+                                {
+                                    "optionId": 52,
+                                    "optionText": "Neutral/Don't Know",
+                                    "meaning": "N"
+                                },
+                                {
+                                    "optionId": 51,
+                                    "optionText": "Disagree",
+                                    "meaning": "P"
+                                },
+                                {
+                                    "optionId": 50,
+                                    "optionText": "Strongly Disagree",
+                                    "meaning": "P"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionId": 4,
+                    "sectionNumOfSurvey": 4,
+                    "sectionName": "Creative Thinking",
+                    "surveyId": 1,
+                    "questionsOfSingleSection": [
+                        {
+                            "questionId": "11",
+                            "questionNumOfSection": 1,
+                            "questionName": null,
+                            "questionText": "There has been a 30% drop in use of the food canteen/restaurant within one of the high schools in your area over the past six months. You have been asked to make some suggestions to solve the problem.",
+                            "questionDescription": "Please complete the following example question for only 3 minutes, which will help get you into the right frame of mind before you complete the real questions. ",
+                            "questionInstruction": "List as many potential ideas you have to resolve this issue using the numbered lines below. \nRemember to come up with a range of different ideas – no matter how silly they seem!",
+                            "questionType": "short_answer",
+                            "imgUrl": "/images/survey_content/c0fd4acd-976d-479d-8995-d56304093923.png",
+                            "sectionId": "4",
+                            "options": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

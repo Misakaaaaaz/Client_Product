@@ -1,0 +1,182 @@
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Apply Lato font globally */
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;  /* Disable scrolling on the page */
+}
+
+/* Top bar styles */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #008b8b;
+    color: white;
+    width: 100vw;
+    height: 60px;  /* Fixed height */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 10px;  /* Rounded corners */
+}
+
+.logo h2 {
+    margin-top: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  /* Fully circular icon */
+    margin-left: 10px;
+}
+
+/* Main content area */
+.main-content {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 60px); /* Subtract the height of the top bar to ensure the remaining area is filled */
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px; 
+    background-color: #e0f7f7; /* Light background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: #008b8b; /* Default green text color */
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item.active {
+    background-color: #008b8b;  /* Dark background when highlighted */
+    color: white;  /* White text when highlighted */
+    font-weight: bold;
+}
+
+.menu-item:hover {
+    background-color: #00c5c5;  /* Background color when hovered */
+    color: white; /* White text when hovered */
+    font-weight: bold;
+}
+
+.menu-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    border-radius: 8px;  /* Add rounded corners to sidebar icons */
+}
+
+.settings {
+    margin-top: auto;
+}
+
+/* Help page main content */
+.help-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: left; /* Left-align text */
+    font-size: 20px;
+    background-color: #ffffff;
+}
+
+
+.help-box {
+    background-color: #e0f7f7;;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60vw;
+    z-index: 1000;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.help-box h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.help-box p {
+    text-align: left;
+}
+
+.help-button {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1001;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.help-button:hover {
+    transform: scale(0.95);
+    background-color: rgb(206, 0, 0);
+}
+
+.help-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 8px;  /* Add rounded corners to the help button icon */
+}

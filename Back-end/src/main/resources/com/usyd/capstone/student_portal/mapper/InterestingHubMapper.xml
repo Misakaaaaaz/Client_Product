@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.usyd.capstone.student_portal.mapper.InterestingHubMapper">
+
+    <!-- 插入帖子 -->
+    <insert id="insertPost" parameterType="com.usyd.capstone.student_portal.pojo.InterestingHubPost" useGeneratedKeys="true" keyProperty="postId">
+        INSERT INTO interesting_hub_post (title, context, foe_id, created_at)
+        VALUES (#{title}, #{context}, #{foeId}, #{createdAt})
+    </insert>
+
+    <!-- 插入图片 -->
+    <insert id="insertPostImage" parameterType="com.usyd.capstone.student_portal.pojo.InterestingHubPostImage">
+        INSERT INTO interesting_hub_post_image (post_id, img_url)
+        VALUES (#{postId}, #{imgUrl})
+    </insert>
+
+    <!-- 结果映射：将图片映射到帖子对象中 -->
+    <resultMap id="PostWithImagesResultMap" type="com.usyd.capstone.student_portal.pojo.InterestingHubPost">
+        <id column="post_id" property="postId"/>
+        <result column="title" property="title"/>
+        <result column="context" property="context"/>
+        <result column="foe_id" property="foeId"/>
+        <result column="foe_name" property="foeName"/>
+        <result column = "click_num" property="clickNum"/>
+        <result column="created_at" property="createdAt"/>
+
+        <!-- 使用嵌套查询来获取图片列表 -->
+        <collection property="images" ofType="com.usyd.capstone.student_portal.pojo.InterestingHubPostImage"
+                    select="selectImagesByPostId" column="post_id"/>
+    </resultMap>
+
+    <!-- 查询所有帖子 -->
+    <select id="selectAllPosts" resultMap="PostWithImagesResultMap">
+        SELECT
+            p.post_id, p.title, p.context, p.foe_id, p.created_at, p.click_num, f.foe_name
+        FROM
+            interesting_hub_post p
+                JOIN
+            foe_info f ON p.foe_id = f.foe_id
+    </select>
+
+    <!-- 根据 post_id 查询图片 -->
+    <select id="selectImagesByPostId" resultType="com.usyd.capstone.student_portal.pojo.InterestingHubPostImage">
+        SELECT image_id, post_id, img_url
+        FROM interesting_hub_post_image
+        WHERE post_id = #{post_id}
+    </select>
+    <select id="selectPostById" resultMap="PostWithImagesResultMap">
+        SELECT p.post_id, p.title, p.context, p.foe_id, f.foe_name, p.created_at, p.click_num
+        FROM interesting_hub_post p
+                 JOIN
+             foe_info f ON p.foe_id = f.foe_id
+        WHERE post_id = #{postId}
+
+    </select>
+
+    <!-- 更新帖子的 click_num -->
+    <update id="updatePostClickNum">
+        UPDATE interesting_hub_post
+        SET click_num = click_num + 1
+        WHERE post_id = #{postId}
+    </update>
+<!--插入浏览时长-->
+    <insert id="insertRecord">
+        INSERT INTO interesting_hub_post_operation (student_id, interesting_hub_post_id, view_duration, create_at)
+        VALUES (#{studentId}, #{postId}, #{viewDuration}, #{createAt})
+    </insert>
+    <select id="getPostOperationByStudentAndPost" resultType="com.usyd.capstone.student_portal.pojo.InterestingHubPostOperation">
+        SELECT * FROM interesting_hub_post_operation
+        WHERE student_id = #{studentId} AND interesting_hub_post_id = #{postId}
+    </select>
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usyd.capstone.student_portal.mapper.Section0AnswerMapper" >
+
+
+    <insert id="recordSection0Answer">
+        INSERT INTO section0_answer
+            (student_id, surname_initial,first_name, middle_name, last_name,
+             age, first_language,
+             other_language, country_born,
+             current_country, current_city, type_of_school,
+             secondary_qualification, work_experience, dream_career)
+        VALUES
+            (#{studentId}, #{surnameInitial}, #{firstName},#{middleName},#{lastName},
+             #{age}, #{firstLanguage},
+             #{otherLanguage}, #{countryBorn},
+             #{currentCountry}, #{currentCity}, #{typeOfSchool},
+             #{secondaryQualification}, #{workExperience}, #{dreamCareer}
+    </insert>
+    <select id="selectSection0AnswerById"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.Section0Answer">
+
+        SELECT
+            section0_answer_id,
+            student_id,
+            surname_initial,
+            first_name,
+            middle_name,
+            last_name,
+            age,
+            first_language,
+            other_language,
+            country_born,
+            current_country,
+            current_city,
+            type_of_school,
+            secondary_qualification,
+            work_experience,
+            dream_career
+        FROM
+            section0_answer
+        WHERE student_id = #{studentId};
+    </select>
+</mapper>

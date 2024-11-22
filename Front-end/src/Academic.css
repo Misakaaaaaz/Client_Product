@@ -1,0 +1,94 @@
+.academic-page .main-content {
+    display: flex;
+    height: calc(100vh - 60px); /* Full height minus header */
+    position: relative; /* For child positioning */
+}
+
+.career-bubbles {
+    position: relative; /* For absolute positioning of bubbles */
+    width: 86vmax;
+    height: 100%;
+    background-color: white;
+}
+
+.career-bubble {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
+    background-color: #00c5c5; /* Default color */
+    border-radius: 50%;  /* Circular shape */
+    color: white;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer;
+    padding: 0% 6%;
+}
+
+.career-bubble:hover {
+    transform: scale(0.95); /* Slight shrink on hover */
+}
+
+.career-bubble:nth-child(1) {
+    background-color: #00c5c5; /* Main color */
+    width: 40%;
+    aspect-ratio: 1/1;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+}
+
+.career-bubble:nth-child(2) {
+    background-color: #00b3b3; /* Lighter color */
+    width: 32%;
+    aspect-ratio: 1/1;
+    top: 10%;
+    left: 5%;
+    z-index: 4;
+}
+
+.career-bubble:nth-child(3) {
+    background-color: #009999;
+    width: 28%;
+    aspect-ratio: 1/1;
+    top: 40%;
+    left: 65%;
+    z-index: 3;
+}
+
+.career-bubble:nth-child(4) {
+    background-color: #008080; /* Darkest color */
+    width: 25%;
+    aspect-ratio: 1/1;
+    top: 5%;
+    left: 60%;
+    z-index: 1;
+}
+
+.career-bubble:nth-child(4) h3 {
+    font-size: 2vmax;
+}
+
+.career-bubble:nth-child(5) {
+    background-color: #008080; /* Darkest color */
+    width: 20%;
+    aspect-ratio: 1/1;
+    top: 55%;
+    left: 20%;
+    z-index: 3;
+}
+
+.career-bubble:nth-child(5) h3 {
+    font-size: 2vmax;
+}
+
+.career-bubble h3 {
+    font-size: 2.5vmax;
+}
+
+.career-bubble p {
+    font-size: 1.5vmax;
+}

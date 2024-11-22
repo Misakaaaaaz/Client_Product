@@ -1,0 +1,46 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": [
+        {
+            "studentFoeId": 1,
+            "studentId": 1,
+            "foeCodeId": 1,
+            "ranking": 1,
+            "foeCode": "0103",
+            "foeName": "Physics and Astronomy"
+        },
+        {
+            "studentFoeId": 2,
+            "studentId": 1,
+            "foeCodeId": 2,
+            "ranking": 2,
+            "foeCode": "0203",
+            "foeName": "Information Systems"
+        },
+        {
+            "studentFoeId": 3,
+            "studentId": 1,
+            "foeCodeId": 3,
+            "ranking": 3,
+            "foeCode": "0803",
+            "foeName": "Business and Management"
+        },
+        {
+            "studentFoeId": 4,
+            "studentId": 1,
+            "foeCodeId": 4,
+            "ranking": 4,
+            "foeCode": "060701",
+            "foeName": "Dentistry"
+        },
+        {
+            "studentFoeId": 5,
+            "studentId": 1,
+            "foeCodeId": 5,
+            "ranking": 5,
+            "foeCode": "061101",
+            "foeName": "Veterinary Science"
+        }
+    ]
+}

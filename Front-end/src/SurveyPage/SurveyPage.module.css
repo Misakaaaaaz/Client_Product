@@ -1,0 +1,141 @@
+
+.surveyContent{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+    /* text-align: left; */
+    /* Left-align text */
+    /* font-size: 20px; */
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.questionContainer {
+    margin: 40px auto;
+    max-width: 800px;
+    max-height: 80vh;
+    background-color: #e0f7f7;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionTitle {
+    background-color: #00b3b3;
+    border-radius: 20px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+}
+
+.questionInfo {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.questionInfo h3{
+    font-size: 20px;
+    color: #00b3b3;
+    margin-bottom: 8px;
+}
+
+.questionInfo p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.questionInfoItem {
+    margin-bottom: 10px;
+}
+
+.questionInfoImg{
+    max-height: 300px;
+    width: auto;
+}
+
+.radioContent {
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.inputContent {
+    min-width: 600px;
+}
+
+/* .backButton {
+    align-self: flex-start;
+} */
+
+.backButton {
+    position: fixed;
+    left: 250px;
+    bottom: 0;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Antd cutomize */
+.custom_radio .optionItem {
+    font-size: 18px;
+    color: #333;
+}
+
+/* button */
+.navButton {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    /* Increased margin for better separation */
+    padding: 12px 20px;
+    /* Larger padding for a more prominent button */
+    background-color: #007f7f;
+    /* Slightly darker shade */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Added transform for a slight zoom effect */
+    font-size: medium;
+}
+
+.navButton:disabled {
+    background-color: #aaaaaa;
+    /* A more distinct disabled color */
+    cursor: not-allowed;
+}
+
+.navButton:hover:not(:disabled) {
+    background-color: #00b3b3;
+    transform: scale(1.05);
+    /* Slightly larger button on hover */
+}
+
+textarea.textAnswer {
+    margin-top: 15px;
+    /* Added margin to separate from question text */
+    width: calc(100% - 20px);
+    /* Adjust width to fit container */
+    min-height: 100px;
+    /* Set a minimum height for comfort */
+    padding: 10px;
+    /* Added padding for better user experience */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}

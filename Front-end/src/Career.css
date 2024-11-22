@@ -1,0 +1,159 @@
+/* Career content section */
+.career-content {
+    flex: 1;
+    padding: 10px 50px;
+    text-align: left;
+    background-color: white;
+}
+
+.career-content {
+    height: 100vh; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.back-btn1 {
+    position: relative;
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #008b8b;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.back-btn1:hover {
+    transform: scale(0.95); /* Shrinks button slightly on hover */
+}
+
+.career-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.career-content h3 {
+    margin-left: 20px;
+    font-size: 1.3rem;
+}
+
+.number-line-container {
+    position: relative;
+    width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+.number-line {
+    width: 100%;
+    height: auto;
+}
+
+.number-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-labels span {
+    font-size: 14px;
+    color: #333;
+}
+
+.career-content p {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.Careers {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Careers-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+    border-radius: 20%;
+}
+
+.related-Careers {
+    padding: 5px 20px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.related-Careers h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.related-Careers h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.related-schools {
+    background-color: #f6f6f6;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.related-schools h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.related-schools h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+.school {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.school-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 20%;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-name {
+    font-weight: bold; /* Bold text for school name */
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.school-information {
+    position: relative;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem; /* Smaller font size for location */
+    color: gray; /* Gray color for location text */
+}

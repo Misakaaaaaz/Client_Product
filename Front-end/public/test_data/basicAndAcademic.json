@@ -1,0 +1,84 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "studentInfo": {
+            "studentId": 2,
+            "studentName": "Qifan Guo",
+            "studentEmail": "944983885@qq.com",
+            "studentAge": "18",
+            "academicCountryId": 3,
+            "percentile": 0.17
+        },
+        "country": {
+            "countryId": 3,
+            "countryName": "China",
+            "educationSystem": "Gaokao"
+        },
+        "performances": [
+            {
+                "studentScoreId": 9,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Overall",
+                "scoreObtained": 563.0,
+                "scoreTotal": 750.0,
+                "medianScore": 412.0
+            },
+            {
+                "studentScoreId": 10,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Maths",
+                "scoreObtained": 116.0,
+                "scoreTotal": 150.0,
+                "medianScore": 81.0
+            },
+            {
+                "studentScoreId": 11,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "English",
+                "scoreObtained": 110.0,
+                "scoreTotal": 150.0,
+                "medianScore": 92.0
+            },
+            {
+                "studentScoreId": 12,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Physics",
+                "scoreObtained": 73.0,
+                "scoreTotal": 100.0,
+                "medianScore": 49.0
+            },
+            {
+                "studentScoreId": 13,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Chemistry",
+                "scoreObtained": 62.0,
+                "scoreTotal": 100.0,
+                "medianScore": 54.0
+            },
+            {
+                "studentScoreId": 14,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Geography",
+                "scoreObtained": 88.0,
+                "scoreTotal": 100.0,
+                "medianScore": 71.0
+            },
+            {
+                "studentScoreId": 15,
+                "studentId": 2,
+                "academicCountryId": 3,
+                "subjectName": "Chinese",
+                "scoreObtained": 114.0,
+                "scoreTotal": 150.0,
+                "medianScore":78.0
+            }
+        ]
+    }
+}

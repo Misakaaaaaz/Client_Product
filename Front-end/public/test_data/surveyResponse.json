@@ -1,0 +1,68 @@
+{
+    "surveyAnswerInfo": {
+        "studentId": 1,
+        "surveyId": 1,
+        "currentSection": 0,
+        "currentNumOfQuestion": 1
+    },
+    "answerDetails": [
+        {
+            "questionId": "23",
+            "answerText": [
+                "China"
+            ]
+        },
+        {
+            "questionId": "24",
+            "answerText": [
+                "1393351439@qq.com"
+            ]
+        },
+        {
+            "questionId": "1",
+            "answerText": [
+                "Set up your own business",
+                "Pay off the debts of family & friends and support a charity close to your heart",
+                "Buy that car, big house, and those other luxuries you’ve always wanted",
+                "Go out and celebrate, celebrate, celebrate!",
+                "Get financial advice - invest wisely in a secure savings plan and give some to parents/family for safe-keeping",
+                "Invest it in your education"
+            ]
+        },
+        {
+            "questionId": "2",
+            "answerText": [
+                "A president, prime minister, or world leader",
+                "A campaigner for human rights or spiritual / religious leader",
+                "A well-known celebrity or social media star",
+                "A rich and successful entrepreneur/businessperson",
+                "A close friend or family member",
+                "A Nobel prize winning academic or chancellor/professor of a top university"
+            ]
+        },
+        {
+            "questionId": "3",
+            "answerText": [
+                "Nature, geography, sports & the outdoors",
+                "Business, politics & leadership",
+                "Arts, music, film & literature"
+            ]
+        },
+        {
+            "questionId": "4",
+            "answerText": []
+        },
+        {
+            "questionId": "5",
+            "answerText": [
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "questionId": "6",
+            "answerText": [
+                "Neutral/Don't Know"
+            ]
+        }
+    ]
+}

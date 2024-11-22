@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usyd.capstone.student_portal.mapper.StudentAcademicMapper" >
+
+
+    <!-- 查询学生的基本信息 -->
+    <select id="selectStudentInfo" parameterType="int" resultType="com.usyd.capstone.student_portal.pojo.StudentAcademicInfo">
+        SELECT
+            student_id, student_name, academic_country_id, percentile
+        FROM
+            student_academic_info
+        WHERE
+            student_id = #{studentId}
+    </select>
+
+    <!-- 查询学生的学术成绩 -->
+    <select id="selectStudentPerformances" parameterType="int" resultType="com.usyd.capstone.student_portal.pojo.StudentAcademicPerformance">
+        SELECT
+            student_score_id, student_id, academic_country_id, subject_name, score_obtained, score_total, score_median
+        FROM
+            academic_performance
+        WHERE
+            student_id = #{studentId}
+    </select>
+
+    <!-- 查询学生的学术国家信息 -->
+    <select id="selectAcademicCountry" parameterType="int" resultType="com.usyd.capstone.student_portal.pojo.AcademicCountry">
+        SELECT
+            country_id, country_name, education_system
+        FROM
+            academic_country
+        WHERE
+            country_id = #{countryId}
+    </select>
+
+</mapper>

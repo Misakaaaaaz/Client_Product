@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usyd.capstone.student_portal.mapper.SurveyAnswerDetailMapper" >
+
+
+    <insert id="insertSurveyAnswerDetail">
+        INSERT INTO survey_answer_detail (answer_id, question_id, answer_text, selected_option_id, rank_order, created_at)
+        VALUES (#{answerId}, #{questionId}, #{answerText}, #{selectedOptionId}, #{rankOrder}, NOW())
+    </insert>
+
+    <update id="updateSurveyAnswerDetail">
+        UPDATE survey_answer_detail
+        SET answer_text = #{answerText},
+            rank_order = #{rankOrder},
+            created_at = #{createdAt}
+        WHERE answer_id = #{answerId} AND question_id = #{questionId}
+    </update>
+    <select id="findByAnswerAndQuestion"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerDetail">
+        SELECT * FROM survey_answer_detail
+        WHERE answer_id = #{answerId} AND question_id = #{questionId}
+    </select>
+    <select id="findByAnswerId" resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerDetail">
+        SELECT * FROM survey_answer_detail
+        WHERE answer_id = #{answerId}
+    </select>
+    <select id="findStringByAnswerAndQuestion"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerStringDetail">
+        SELECT * FROM survey_answer_string_detail
+        WHERE answer_id = #{answerId} AND question_id = #{questionId}
+    </select>
+    <select id="findOptionIdByTextAndQuestion" resultType="java.lang.Integer">
+        SELECT o.option_id
+        FROM section1to4_option o
+                 JOIN section1to4_question q ON o.question_id = q.question_id
+                 JOIN section1to4_info s_info ON q.section_id = s_info.section_id
+                 JOIN survey_info s ON s_info.survey_id = s.survey_id
+        WHERE TRIM(LOWER(o.option_text)) = TRIM(LOWER(#{optionText}))
+          AND q.question_id = #{questionId}
+          AND s.survey_id = #{surveyId}
+    </select>
+    <select id="findQuestionTypeById" resultType="java.lang.String">
+        SELECT question_type
+        FROM section1to4_question
+        WHERE question_id = #{questionId}
+    </select>
+
+    <update id="updateSurveyAnswerStringDetail">
+        UPDATE survey_answer_string_detail
+        SET answer_text = #{finalAnswerText},
+            created_at = #{createdAt}
+        WHERE answer_id = #{answerId} AND question_id = #{questionId}
+    </update>
+    <insert id="insertSurveyAnswerStringDetail">
+        INSERT INTO survey_answer_string_detail (answer_id, question_id, answer_text, created_at)
+        VALUES (#{answerId}, #{questionId}, #{finalAnswerText}, NOW())
+    </insert>
+
+    <select id="findSurveyAnswerDetails"
+            resultType="com.usyd.capstone.student_portal.pojo.Survey.SurveyAnswerStringDetail">
+        SELECT sad.answer_string_detail_id, sad.answer_id, sad.question_id, sad.answer_text AS finalAnswerText, sad.created_at
+        FROM survey_answer_string_detail sad
+                 JOIN survey_answer_info sai ON sad.answer_id = sai.answer_id
+        WHERE sai.student_id = #{studentId} AND sai.survey_id = #{surveyId}
+    </select>
+</mapper>

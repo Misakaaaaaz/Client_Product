@@ -1,0 +1,48 @@
+{
+    "code": 1,
+    "msg": "success",
+    "data": [
+        {
+            "moodId": 12,
+            "studentId": 1,
+            "moodDate": "2024-10-19",
+            "moodScore": 3
+        },
+        {
+            "moodId": 11,
+            "studentId": 1,
+            "moodDate": "2024-10-18",
+            "moodScore": 5
+        },
+        {
+            "moodId": 13,
+            "studentId": 1,
+            "moodDate": "2024-10-15",
+            "moodScore": 3
+        },
+        {
+            "moodId": 10,
+            "studentId": 1,
+            "moodDate": "2024-10-16",
+            "moodScore": 4
+        },
+        {
+            "moodId": 9,
+            "studentId": 1,
+            "moodDate": "2024-10-17",
+            "moodScore": 1
+        },
+        {
+            "moodId": 8,
+            "studentId": 1,
+            "moodDate": "2024-10-14",
+            "moodScore": 2
+        },
+        {
+            "moodId": 7,
+            "studentId": 1,
+            "moodDate": "2024-10-13",
+            "moodScore": 2
+        }
+    ]
+}

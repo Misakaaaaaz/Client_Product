@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.usyd.capstone.student_portal.mapper.DailyMoodMapper">
+
+
+    <select id="selectWeekMood" resultType="com.usyd.capstone.student_portal.pojo.DailyMood">
+        SELECT *
+        FROM daily_mood
+        WHERE student_id = #{studentId}
+          AND mood_date >= CURDATE() - INTERVAL 15 DAY
+        ORDER BY mood_date DESC;
+    </select>
+    <select id="countMoodByStudentAndDate" resultType="java.lang.Integer">
+        SELECT count(*)
+        FROM daily_mood
+        WHERE student_id = #{studentId} AND mood_date = #{moodDate}
+    </select>
+
+    <update id="updateMood">
+        UPDATE daily_mood SET mood_score = #{moodScore}
+        WHERE student_id = #{studentId} AND mood_date = #{moodDate}
+    </update>
+</mapper>

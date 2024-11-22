@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usyd.capstone.student_portal.mapper.Section1AnswerMapper" >
+
+
+    <insert id="insertSection1Answer">
+        INSERT INTO section1_answer (answer_id, question_id, option_id, ranking_position, created_at)
+        VALUES (#{answerId}, #{questionId}, #{optionId}, #{rankingPosition}, #{createdAt})
+    </insert>
+    <insert id="insertSurveyAnswerInfo">
+        INSERT INTO survey_answer_info (student_id, survey_id, created_at)
+        VALUES (#{studentId}, #{surveyId}, #{createdAt})
+    </insert>
+
+
+</mapper>
